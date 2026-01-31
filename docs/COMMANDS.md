@@ -1,13 +1,22 @@
 # Commands
 
 ## Install
-- (if needed) e.g. `npm install`
+```bash
+npm install
+```
 
 ## Run
-- e.g. `npm run dev`
+```bash
+node src/index.js <url>
+# Example: node src/index.js https://example.com
+```
 
 ## Test
-- e.g. `npm test`
+```bash
+npm test
+```
 
 ## Lint/Format
-- e.g. `npm run lint`
+```bash
+npm run lint
+```

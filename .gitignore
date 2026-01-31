@@ -1,1 +1,18 @@
 .DS_Store
+
+# Node.js
+node_modules/
+npm-debug.log*
+package-lock.json
+yarn.lock
+
+# Output files
+*.md
+!README.md
+!AGENTS.md
+!docs/**/*.md
+!.claude/**/*.md
+
+# Environment
+.env
+.env.local

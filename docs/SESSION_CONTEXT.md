@@ -1,39 +1,25 @@
 # Session Context
 
 ## Session updates
-- 2026-01-22: Updated AGENTS.md paths to use docs/* and remove ProjectTemplate references. Current status: paths cleaned. Next steps: none.
+- 2026-01-31: Bootstrapped SiteBuddy project. Created initial Node.js CLI structure for web-to-markdown conversion. Current status: initial setup. Next steps: implement core scraping and markdown conversion.
 
 ## What this repo is
-- One sentence: what this project does.
-
-Example Q/A:
-Q: What is this repo?
-A: A Chrome extension that batch-fills Drupal edit forms from a CSV.
+A Node.js CLI tool that reads websites and converts them to markdown files.
 
 ## Current goal
-- The most important thing to do next.
-
-Example Q/A:
-Q: What’s the goal for this session?
-A: Add support for XLSX import and fix notification styling.
+Set up initial project structure with basic web scraping and markdown conversion functionality.
 
 ## Where to look first
-- 3–5 files/folders that matter most.
-
-Example Q/A:
-Q: What files should I check first?
-A: manifest.json, lib/data-manager.js, lib/form-filler.js, content/content.js, config/form-templates.json.
+- package.json - project dependencies and scripts
+- src/index.js - main CLI entry point
+- src/scraper.js - web scraping logic
+- src/converter.js - HTML to markdown conversion
+- README.md - usage instructions
 
 ## Known issues / risks
-- Bullet list of sharp edges or unresolved problems.
-
-Example Q/A:
-Q: Any known issues?
-A: XLSX import doesn’t work; CSV parsing fails on embedded newlines.
+- Need to handle different website structures and edge cases
+- May need to handle JavaScript-rendered content (consider Puppeteer if needed)
+- Rate limiting and robots.txt compliance
 
 ## How to validate
-- Minimal steps to verify changes.
-
-Example Q/A:
-Q: How do we validate?
-A: Reload the extension, import a sample CSV, open a /node/*/edit page, click “Fill Form,” confirm fields update.
+Run `node src/index.js <url>` and verify markdown file is created with correct content.
